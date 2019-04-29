@@ -10,7 +10,7 @@ having to compile it beforehand.
 
 1. Prepare function code (in `function.ts`)
 
-```
+```typescript
 async function justWait() {
   return new Promise((resolve, reject) => setTimeout(resolve, 100));
 }
@@ -30,7 +30,7 @@ export const handler = async (event: unknown) => {
 
 2. Provide `tsconfig.json`, since we use *es2015* features
 
-```
+```json
 {
   "compilerOptions": {
     "target": "es5",
